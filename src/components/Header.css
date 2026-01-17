@@ -1,0 +1,146 @@
+.img-name-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.img-name-div:hover{
+  transform: translateX(5px);
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 80px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  box-shadow: 0 4px 30px rgba(255, 69, 0.5);
+  z-index: 1000; /* keep header above other content */
+  background: rgba(10, 10, 15, 0.95);
+  border-bottom: 1px solid rgba(255,69,0,0.2);
+  transition: all 0.3s ease;
+}
+.header:hover{
+  box-shadow: 0 6px 40px rgba(255, 69, 0, 0.15);
+}
+.company-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid transparent;
+  background: linear-gradient(rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.95)
+  padding-box,
+  linear-gradient(135deg, #ff4500, #ff8c00) border-box);
+  transition: all 0.3s ease;
+}
+.company-icon:hover{
+  transform: rotate(5deg) scale(1.05);
+}
+.company-name {
+  font-size: 26px;
+  font-family: 'Inter','Segoe UI',sans-serif;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 0%, #ff6347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+.list-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  list-style-type: none;
+  padding: 0;
+  font-size: 20px;
+  margin: 0;
+}
+.list-div li{
+  position: relative;
+}
+.list-div a {
+text-decoration: none;
+color:#e0e0e0;
+font-weight: 600;
+font-size: 16px;
+transition: all 0.3s ease;
+position: relative;
+padding: 8px 0;
+}
+.list-div a::after{
+  content: '';
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff4500, #ff8c00);
+  transition: width 0.3s ease;
+}
+.list-div a:hover {
+  color: #ff6347;
+  transition: 0.3s;
+}
+
+.list-div a:hover::after{
+  width: 100%;
+}
+.list-div a.active{
+  color: #ff4500;
+}
+.list-div a.active::after{
+  width: 100%;
+}
+
+.menu-toggle{
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+.menu-toggle span{
+  width: 25px;
+  height: 3px;
+  background: #ff4500;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+@media (max-width:968px) {
+  .header{
+    padding: 15px 40px;
+  }
+  .list-div{
+    gap: 25px;
+  }
+}
+@media (max-width:768px) {
+  .header{
+    padding: 15px 20px;
+  }
+  .company-name{
+    font-size: 18px;
+  }
+  .company-icon{
+    width: 40px;
+    height: 40px;
+  }
+  .img-name-div{
+    gap: 10px;
+  }
+  .nav-div{
+    display: none;
+  }
+
+}

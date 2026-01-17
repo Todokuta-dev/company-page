@@ -1,0 +1,111 @@
+.services-section {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 80px 60px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  color: white;
+}
+.services-header-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.services-header-div h3 {
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #ffffff 0%, #ff6347 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.services-header-div p {
+  color: #b0b0b0;
+  font-weight: bold;
+}
+.services-card-div {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 40px;
+
+}
+.services-card {
+  background: linear-gradient(rgba(10, 10, 15, 0.6 ), rgba(10, 10, 15, 0.6)) padding-box,
+  linear-gradient(135deg, rgba(255, 69, 0, 0.3), rgba(255, 140, 0, 0.3)) border-box ;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:all 0.3s ease;
+  box-shadow: 0 6px 40px rgba(255, 69, 0, 0.15);
+  padding: 30px 30px 15px;
+  backdrop-filter: blur(13px);
+  border-radius: 12px;
+}
+.services-card:hover {
+  background: linear-gradient(rgba(10, 10, 15, 0.8 ), rgba(10, 10, 15, 0.8)) padding-box,
+  linear-gradient(135deg, #ff4500, #ff8c00 ) border-box ;
+  box-shadow: 0 4px 30px rgba(255, 69, 0.5);
+  transform: translateY(-10px) scale(1.02);
+}
+.card-icon {
+  width: 120px;
+  border-radius: 50px;
+  border: 3px solid rgba(255, 69, 0, 0.3);
+  padding: 10px;
+  background: rgba(255, 69, 0, 0.1);
+  object-fit: cover;
+  height: 120px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+.services-card:hover .card-icon{
+  transform: scale(1.1) rotate(5deg);
+  border-color: #ff4500;
+}
+.service-title{
+  font-size: 22px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 20px 0 10px;
+  font-family: 'Inter', sans-serif;
+}
+.service-description{
+  font-size: 15px;
+  color: #b0b0b0;
+  text-align: center;
+  line-height: 1.6;
+  margin: 0;
+}
+@media (max-width:968px) {
+  .services-section{
+    padding: 60px 40px;
+  }
+  .services-card-div{
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width:768px) {
+  .services-section{
+    padding: 40px 20px;
+  }
+  .services-header-div h3{
+    font-size: 28px;
+  }
+  .services-card-div{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .card-icon{
+    width: 80px;
+    height: 80px;
+  }
+  .service-title{
+    font-size: 20px;
+  }
+  .service-description{
+    font-size: 14px;
+  }
+}
